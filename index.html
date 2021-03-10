@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>tutorial1</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body style="background-color:#000000;">
+<br><br><br><br><br>
+<div style="text-align : center;" align="center">
+<div id="box" style="width:800px;"><br></div><div id="box" style="width:800px;"><br></div><div id="box" style="width:800px;">
+<img src="./문제1.png" id="문제1" usemap="#문제1">
+<map name="문제1">
+    <area target="" alt="" title="" href="#next1" coords="695,505,696,547,727,526" shape="poly" onclick="document.getElementById('문제2').style.display='block';document.getElementById('문제1').style.display='none';document.getElementById('content').style.display='block';">
+<area target="_blank" coords="327,415,471,536" shape="rect" href="./crossword.png" download>
+</map>
+
+<p style="text-align: center; " align="center">
+<img src="./문제.png" id="문제2" usemap="#문제2" style="z-index:3;">
+<map name="문제2">
+<area target="" alt="" title="" href="#prev4" coords="112,505,75,528,111,546" shape="poly" onclick="document.getElementById('문제1').style.display='block';document.getElementById('문제2').style.display='none';document.getElementById('content').style.display='none';document.getElementById('content').style.display='none';">
+</map>
+ </p>
+
+
+<div id="content">
+</div>
+
+
+<p style="text-align: center; " align="center">
+<div id="crossword" draggable="true"></div>
+ </p>
+
+</div>
+
+
+
+<audio loop="" id="clear">
+ <source src="./party.mp3" type="audio/mp3">
+</audio>
+<audio loop="" autoplay="autoplay" id="tutorial">
+ <source src="./poniko.mp3" type="audio/mp3">
+</audio>
+
+
+<style>
+#문제2{display:none; opacity:0.7; z-index:3; pointer-events: none;user-select: none;}
+#튜토5{display:none; opacity: 0;}
+#crossword{position: absolute;
+    left: 300px;
+    bottom: 80px;
+z-index:-1;}
+#content{display:none;position: absolute;
+    left: 300px;
+    bottom: 20px;}
+#box{margin:0 auto; position: relative;}
+
+</style>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+
+<script  src="./script.js"></script>
+  <script>
+  $( function() {
+    $( 'crossword').draggable();
+  } );
+
+
+</body>
+</html>
